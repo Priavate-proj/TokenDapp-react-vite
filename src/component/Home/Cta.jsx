@@ -21,8 +21,10 @@ export default function Cta() {
             moment in finance—and also the least understood.
           </p>
 
+          
+
           <div className="text-center md:text-center lg:text-left">
-            <button className="border-0 px-8  md:text-lg py-1 transition duration-40 text-white rounded-md font-normal md:font-normal mt-5 hover:bg-[#b495ff] bg-[#4755de]">
+            <button className="border-0 px-8  md:text-lg py-1 text-white rounded-md font-normal md:font-normal mt-5 hover:bg-[#4756de9e] bg-[#4756decf]">
               Select chain
             </button>
           </div>

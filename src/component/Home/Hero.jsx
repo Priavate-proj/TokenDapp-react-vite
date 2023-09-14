@@ -1,7 +1,7 @@
 import React from 'react'
 import {LiaWalletSolid} from 'react-icons/lia'
 import { Link } from 'react-router-dom';
-import heroimage from "../../assets/images/blockchain-3019121_1280-removebg-preview.png";
+import heroimage from "../../assets/blockchain-3019121_1280-removebg-preview.png";
 
 
 const Hero  = () => {
