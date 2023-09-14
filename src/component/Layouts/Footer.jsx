@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className=" text-center">
           <div className="">
-            <p className=" md:text-lg text-[#b4ccf7">© Copyright DApp 2023.</p>
+            <p className=" md:text-lg text-[#b4ccf7">© Copyright DApp 2023</p>
           </div>
         </div>
       </footer>
