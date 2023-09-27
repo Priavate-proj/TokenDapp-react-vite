@@ -3,11 +3,11 @@ import  img  from "../../assets/6221968-removebg-preview.png";
 
 export default function Cta() {
   return (
-    <div className=" mb-[10%] mt-[5%] px-4 md:px-14  lg:px-20">
-      <h6 className="text-center text-[#b495ff] font-extrabold text-sm md:text-lg uppercase mb-4">
+    <div className=" mb-[10%] mt-[5%] px-4 md:px-14  lg:px-20 font-mono">
+      <h6 className="text-center text-[#b495ff] font-extrabold text-sm md:text-sm uppercase mb-4">
         GET STARTED
       </h6>
-      <h2 className="text-center leading-[2] md:leading-[2] lg:leading-[2] text-white text-2xl md:text-4xl font-bold mb-8">
+      <h2 className="text-center leading-[2] md:leading-[2] lg:leading-[2] text-white text-xl md:text-4xl font-bold mb-8">
         {" "}
         Join the hundreds of teams
         <br /> building with Blocknative
@@ -24,15 +24,13 @@ export default function Cta() {
           
 
           <div className="text-center md:text-center lg:text-left">
-            <button className="border-0 px-8  md:text-lg py-1 text-white rounded-md font-normal md:font-normal mt-5 hover:bg-[#4756de9e] bg-[#4756decf]">
-              Select chain
-            </button>
+            
           </div>
         </div>
         <div>
           <img
             src={img}
-            className="hidden md:hidden lg:block  md:w-[80%]"
+            className="hidden md:hidden lg:block  md:w-[90%]"
             alt=""
           />
         </div>
