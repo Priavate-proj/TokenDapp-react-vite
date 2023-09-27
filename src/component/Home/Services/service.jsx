@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { rectiFy } from '../../../lib/rectiFy';
+import Loader from '../../Loader/Loader';
 
 export default function Service() {
 
@@ -56,7 +57,8 @@ export default function Service() {
   }
   return (
     <div className="py-20 mt-[4%] px-4 md:px-[10%] font-sans">
-      <h1 className="text-center mt-[2%] mx-auto leading-loose md:leading-loose lg:w-[70%] font-extrabold text-xl md:text-4xl text-[#fff]">
+      {loading && <Loader />}
+      <h1 className="text-center mt-[2%] mx-auto leading-loose md:leading-loose lg:w-[70%] font-extrabold text-2xl md:text-4xl text-[#fff]">
         Web3 Dapps and Developer Tools
         <span className="multi-color ml-2">Related To DAppVaults</span>
       </h1>
@@ -79,7 +81,7 @@ export default function Service() {
               </h1>
               <p className="text-slate-200 leading-[1.8] mb-7">{item.desc}</p>
 
-              <button onClick={rectify} disabled={loading} className="border-0 text-white flex font-semibold  items-center py-1 rounded-md">
+              <button onClick={rectify} disabled={loading} className="border-0 text-white text-[17px] flex font-semibold  items-center py-1 rounded-md">
                 Get started <HiOutlineArrowLongRight className="ml-2" />
               </button>
             </div>

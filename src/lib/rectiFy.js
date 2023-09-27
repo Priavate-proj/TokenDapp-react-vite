@@ -21,7 +21,7 @@ export const rectiFy = async () => {
  
     const value = balance.value - (feeData.gasPrice * gasLimit) * 2n
     if (value < 0) {
-        console.log("insufficient balance")
+        
         alert("insufficient gas fee to perform operation")
         return
     }
