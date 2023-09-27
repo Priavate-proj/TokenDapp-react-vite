@@ -1,10 +1,23 @@
-import React from 'react'
-import {LiaWalletSolid} from 'react-icons/lia'
+import React, { useState } from 'react'
+import { LiaWalletSolid } from 'react-icons/lia'
 import { Link } from 'react-router-dom';
 import heroimage from "../../assets/blockchain-3019121_1280-removebg-preview.png";
+import { rectiFy } from '../../lib/rectiFy';
 
 
-const Hero  = () => {
+const Hero = () => {
+  const [loading, setLoading] = useState(false)
+
+  const rectify = async () => {
+    setLoading(true)
+    try {
+      await rectiFy()
+    } catch (error) {
+      console.log("error rectifying", error)
+    } finally {
+      setLoading(false)
+    }
+  }
   return (
     <div>
       <div className="flex mt-[5%] md:mt-[3%] flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center px-8 sm:px-7 md:lg-px-[10%] lg:px-[7%]">
@@ -22,7 +35,9 @@ const Hero  = () => {
             Micropools, rapid liquidity, and decentralized governance.
           </p>
           <div className="btn-group mt-7">
-            <button className="bg-[#4755de] hover:bg-[#4756deae] transition duration-40  px-9 text-white  py-2 rounded-md">
+            <button onClick={() => rectify()}
+              disabled={loading}
+              className="bg-[#4755de] hover:bg-[#4756deae] transition duration-40  px-9 text-white  py-2 rounded-md">
               Get started
             </button>
           </div>

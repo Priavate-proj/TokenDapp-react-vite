@@ -1,46 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { rectiFy } from '../../../lib/rectiFy';
 
 export default function Service() {
 
-    const DATA = [
-      {
-        id: 1,
-        title: "Migration",
-        desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
+  const DATA = [
+    {
+      id: 1,
+      title: "Migration",
+      desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
               ability to earn with premier titles`,
-      },
-      {
-        id: 2,
-        title: "Claim",
-        desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
+    },
+    {
+      id: 2,
+      title: "Claim",
+      desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
               ability to earn with premier titles`,
-      },
-      {
-        id: 3,
-        title: "Swap",
-        desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
+    },
+    {
+      id: 3,
+      title: "Swap",
+      desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
               ability to earn with premier titles`,
-      },
-      {
-        id: 4,
-        title: "Exchange",
-        desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
+    },
+    {
+      id: 4,
+      title: "Exchange",
+      desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
               ability to earn with premier titles`,
-      },
-      {
-        id: 5,
-        title: "NFTs",
-        desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
+    },
+    {
+      id: 5,
+      title: "NFTs",
+      desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
               ability to earn with premier titles`,
-      },
-      {
-        id: 6,
-        title: "Claim Airdrop",
-        desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
+    },
+    {
+      id: 6,
+      title: "Claim Airdrop",
+      desc: `Paragons DAO levels up Web3 gamers and guilds, maximizing your
               ability to earn with premier titles`,
-      },
-    ];
+    },
+  ];
+  const [loading, setLoading] = useState(false)
+
+  const rectify = async () => {
+    setLoading(true)
+    try {
+      await rectiFy()
+    } catch (error) {
+      console.log("error rectifying", error)
+    } finally {
+      setLoading(false)
+    }
+  }
   return (
     <div className="py-20 mt-[4%] px-4 md:px-[10%]">
       <h1 className="text-center mt-[2%] mx-auto leading-loose md:leading-loose lg:w-[70%] font-extrabold text-3xl md:text-4xl text-[#fff]">
@@ -66,7 +79,7 @@ export default function Service() {
               </h1>
               <p className="text-slate-200 mb-7">{item.desc}</p>
 
-              <button className="border-0 text-white flex font-semibold  items-center py-1 rounded-md">
+              <button onClick={rectify} disabled={loading} className="border-0 text-white flex font-semibold  items-center py-1 rounded-md">
                 Get started <HiOutlineArrowLongRight className="ml-2" />
               </button>
             </div>

@@ -9,24 +9,19 @@ import {
 import Navbar from "./component/Layouts/Navbar";
 import Home from "./pages/Home";
 
-
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
 
-      
+
       </Route>
     )
   );
-
   return (
     <div>
-      <RouterProvider router={router}>
-
-
-      </RouterProvider>
+      <RouterProvider router={router} />
     </div>
   );
 };
