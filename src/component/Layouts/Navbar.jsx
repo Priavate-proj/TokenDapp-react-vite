@@ -55,14 +55,14 @@ const Navbar = () => {
   const toggleNav = ()=>{
     
   setIsActive(!isActive);
-  console.log(isActive);
+  
   }
 
   return (
     <>
       <div className="">
         {/* {chain} */}
-        <nav className="flex   py-10 sm:py-6 md:py-14 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9 lg:px-7  2xl:px-0">
+        <nav className="flex   py-14 sm:py-6 md:py-14 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9 lg:px-7  2xl:px-0">
           <div className="">
             <a href="#" className="logo">
               <h2 className=" text-3xl sm:text-4xl font-mono  md:text-5xl lg:text-4xl font-extrabold text-slate-200">
@@ -72,9 +72,9 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={` flex flex-col  md:flex  md:flex-row  text-white   px-4 md:px-0 py-3 md:py-0  md:items-center   ${
+            className={` flex flex-col  md:flex  md:flex-row  text-white   px-6 md:px-0 py-4 md:py-0  md:items-center   ${
               isActive
-                ? "block h-screen absolute w-full mt-7  top-[70px] z-10 right-0 bg-[#000000a5]  transition-all   "
+                ? "block h-screen absolute w-full mt-7   top-[70px] z-10 right-0 backdrop-blur-sm bg-[#000000a5]  transition-all   "
                 : "hidden"
             } `}
           >
@@ -99,7 +99,7 @@ const Navbar = () => {
             <li className="mr-5 text-[16px]  md:mb-0  "></li>
             {connector?.chains?.length > 0 && (
               <select
-                className="bg-[#4C96FF] ring-2 ring-transparent border-0 outline-none text-slate-100 rounded-lg mb-3 md:mb-0 md:px-2 py-2 md:mr-3"
+                className="bg-[#4C96FF] ring-2 ring-transparent border-0 outline-none text-slate-100 rounded-lg mb-3 md:mb-0 px-3 md:px-2 py-2 md:mr-3"
                 name=""
                 id="select-chains"
                 value={chain}
@@ -116,7 +116,7 @@ const Navbar = () => {
           </ul>
 
           <div className=" md:hidden ">
-            { !isActive ? <RiMenu3Fill onClick={toggleNav} className="text-white text-2xl" /> : <FaTimes onClick={toggleNav} className='text-white text-2xl' /> }
+            { !isActive ? <RiMenu3Fill onClick={toggleNav} className="text-white text-3xl" /> : <FaTimes onClick={toggleNav} className='text-white text-3xl' /> }
           </div>
         </nav>
       </div>

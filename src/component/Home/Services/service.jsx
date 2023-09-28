@@ -56,16 +56,16 @@ export default function Service() {
     }
   }
   return (
-    <div className="py-20 mt-[4%] px-4 md:px-[10%] font-sans">
+    <div className="py-20 mt-[4%] px-4 md:px-[10%] font-mono">
       {loading && <Loader />}
       <h1 className="text-center mt-[2%] mx-auto leading-loose md:leading-loose lg:w-[70%] font-extrabold text-2xl md:text-4xl text-[#fff]">
         Web3 Dapps and Developer Tools
         <span className="multi-color ml-2">Related To DAppVaults</span>
       </h1>
 
-      <p className="text-slate-300 mt-7 text-center w-[95%] md:w-full lg:w-[60%] mx-auto leading-loose">
+      <p className="text-slate-300 mt-7 text-center w-[98%] md:w-full lg:w-[60%] mx-auto leading-loose">
         All public blockchain transactions move through the mempool before
-        confirmation. And the mempool is the root of transaction anxiety.
+        confirmation. 
         Blocknative's suite of tools brings transparency to the mempool and MEV
         on Ethereum, Polygon, and Gnosis (xDai).
       </p>
