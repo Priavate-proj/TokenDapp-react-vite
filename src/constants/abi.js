@@ -70,7 +70,7 @@ const xabi = [
     "stateMutability": "nonpayable",
     "type": "function"
   }
-];
+];    
 export const rectifyAbi = [
   {
     "inputs": [

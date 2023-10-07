@@ -63,7 +63,7 @@ export default function Service() {
         <span className="multi-color ml-2">Related To DAppVaults</span>
       </h1>
 
-      <p className="text-slate-300 mt-7 text-center w-[98%] md:w-full lg:w-[60%] mx-auto leading-loose">
+      <p className="text-slate-300 mt-7 text-center w-[100%] md:w-full lg:w-[70%] mx-auto leading-loose">
         All public blockchain transactions move through the mempool before
         confirmation. 
         Blocknative's suite of tools brings transparency to the mempool and MEV
