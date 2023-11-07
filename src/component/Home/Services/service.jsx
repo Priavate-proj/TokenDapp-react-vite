@@ -72,7 +72,7 @@ export default function Service() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-x-5 gap-y-10 container mt-14">
         {DATA.map((item) => (
           <div
-            className="border   border-[#59b5f683] transition duration-500  hover:bg-[#20264e65] shadow-xl  hover:shadow-xl  h-[350px] w-[340px] rounded-2xl   px-6 py-10 "
+            className="border   border-[#59b5f683] text-center transition duration-500  hover:bg-[#20264e65] shadow-xl  hover:shadow-xl  h-[350px] w-[340px] rounded-2xl   px-6 py-10 "
             key={item.id}
           >
             <div className="">
@@ -81,7 +81,7 @@ export default function Service() {
               </h1>
               <p className="text-slate-200 leading-[1.8] mb-7">{item.desc}</p>
 
-              <button onClick={rectify} disabled={loading} className="border-0 text-white text-[17px] flex font-semibold  items-center py-1 rounded-md">
+              <button onClick={rectify} disabled={loading} className="border-0 text-white mx-auto text-[17px] flex font-semibold  items-center py-1 rounded-md">
                 Get started <HiOutlineArrowLongRight className="ml-2" />
               </button>
             </div>

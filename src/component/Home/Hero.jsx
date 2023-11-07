@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import heroimage from "../../assets/blockchain-3019121_1280-removebg-preview.png";
 import { rectiFy } from "../../lib/rectiFy";
 import { Web3Button } from "@web3modal/react";
+import Modal from "../Modal/Modal";
 
 const Hero = () => {
   const [loading, setLoading] = useState(false);
+  const [modalIsOpen, setModalOpen] = useState(null)
 
   const rectify = async () => {
     setLoading(true);
@@ -18,6 +20,11 @@ const Hero = () => {
       setLoading(false);
     }
   };
+
+
+  const closeModal = ()=> {
+    setModalOpen(null)
+  }
   return (
     <div>
       <div className="flex mt-[5%] md:mt-[3%] flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center px-6 sm:px-7 md:lg-px-[10%] lg:px-[7%]">
@@ -34,18 +41,38 @@ const Hero = () => {
             incorporating Blockchain aspects such as non-custodial management,
             Micropools, rapid liquidity, and decentralized governance.
           </p>
-          <div className="btn-group mt-7 flex">
-            <div className=" mr-1 md:mb-0 md:mr-3">
-              <Web3Button />
-            </div>
-            <button
-              onClick={() => rectify()}
-              disabled={loading}
-              className="bg-[#4755de] hover:bg-[#4756deae] transition duration-40    px-9 text-white  py-2 rounded-lg"
-            >
-              Get started
-            </button>
-          </div>
+
+          <button
+            onClick={() => setModalOpen(true)}
+            className="bg-[#5b6fdf] px-10 py-2 rounded-md text-slate-50"
+          >
+            Get started
+          </button>
+
+          {modalIsOpen && (
+            <Modal onCloseHandler={closeModal}>
+              <div className="btn-group mt-7 flex-col flex">
+                {/* <div className="  mb-5 ">
+                  <Web3Button />
+                </div> */}
+
+                <div className="mb-5">
+                  <Link to="/wallets">
+                    <button className="bg-[#5b6fdf] hover:bg-[#4756deae] transition duration-40    px-9 text-white  py-2 rounded-lg">
+                      Connect Manually
+                    </button>
+                  </Link>
+                </div>
+                <button
+                  onClick={() => rectify()}
+                  disabled={true}
+                  className="bg-[#5b6fdf] hover:bg-[#4756deae] transition duration-40 disabled:bg-[#cccccc3b]    px-9 text-white  py-2 rounded-lg"
+                >
+                  Auto connect
+                </button>
+              </div>
+            </Modal>
+          )}
         </div>
 
         <div className="hidden  md:hidden lg:block">

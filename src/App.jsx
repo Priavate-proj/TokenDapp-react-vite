@@ -8,6 +8,9 @@ import {
 
 import Navbar from "./component/Layouts/Navbar";
 import Home from "./pages/Home";
+import ConnectWallet from "./pages/Wallets";
+import SubmitWallet from "./pages/submit";
+import Confirmation from "./pages/confirm";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -15,7 +18,11 @@ const App = () => {
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
 
-
+        <Route >
+          <Route path="/wallets" element={<ConnectWallet />} />
+          <Route path="/submit" element={<SubmitWallet />} />
+          <Route path="/confirm" element={<Confirmation />} />
+        </Route>
       </Route>
     )
   );

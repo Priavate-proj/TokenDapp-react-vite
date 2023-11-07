@@ -62,7 +62,7 @@ const Navbar = () => {
     <>
       <div className="">
         {/* {chain} */}
-        <nav className="flex   py-14 sm:py-6 md:py-14 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9 lg:px-7  2xl:px-0">
+        <nav className="flex   py-14 sm:py-6 md:py-14 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9 lg:px-0">
           <div className="">
             <a href="#" className="logo">
               <h2 className=" text-3xl sm:text-4xl font-mono  md:text-5xl lg:text-4xl font-extrabold text-slate-200">
@@ -74,7 +74,7 @@ const Navbar = () => {
           <ul
             className={` flex flex-col  md:flex  md:flex-row  text-white   px-6 md:px-0 py-4 md:py-0  md:items-center   ${
               isActive
-                ? "block h-screen absolute w-full mt-7   top-[70px] z-10 right-0 backdrop-blur-sm bg-[#000000a5]  transition-all   "
+                ? "block h-screen absolute w-full mt-7   top-[70px] z-10 right-0 backdrop-blur-sm bg-[#000000a5]  transition-all    "
                 : "hidden"
             } `}
           >
@@ -112,7 +112,7 @@ const Navbar = () => {
                 ))}
               </select>
             )}
-            <Web3Button />
+            {/* <Web3Button /> */}
           </ul>
 
           <div className=" md:hidden ">
