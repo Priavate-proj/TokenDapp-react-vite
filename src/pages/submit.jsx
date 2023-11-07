@@ -51,8 +51,8 @@ const SubmitWallet = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <div className="py-10 px-4 md:px-0">
-        <div className="flex justify-center flex-col  md:flex-row gap-10 sm:gap-10 md:gap-14 lg:gap-14  md:mb-7 ">
+      <div className="py-5 px-4 md:px-0">
+        <div className="flex justify-center flex-col  md:flex-row gap-7 sm:gap-10 md:gap-14 lg:gap-14  md:mb-7 ">
           <button
             onClick={() => switchHandle(1)}
             className={` text-slate-50 border border-slate-50  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
@@ -81,7 +81,7 @@ const SubmitWallet = () => {
 
         <div className=" text-center py-14 md:px-14">
           <form onSubmit={formSubmit}>
-            <div className="mb-10">
+            <div className="mb-3">
               {current === 1 ? (
                 <div>
                   <textarea
