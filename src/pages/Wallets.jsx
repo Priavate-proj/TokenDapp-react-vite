@@ -40,7 +40,7 @@ const DATA = [
   { id: 3, wallet: "Coinbase", logo: wallet3 },
   { id: 4, wallet: "Crypto.com", logo: wallet4 },
   { id: 5, wallet: "Defi", logo: wallet31 },
-  { id: 6, wallet: "", logo: wallet5 },
+  { id: 6, wallet: "Nimiq", logo: wallet5 },
   { id: 7, wallet: "Safepal", logo: wallet6 },
   { id: 8, wallet: "Authereum", logo: wallet7 },
   { id: 9, wallet: "Fint", logo: wallet8 },
