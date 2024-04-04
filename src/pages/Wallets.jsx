@@ -32,6 +32,7 @@ import wallet28 from "../assets/wallets/images/Monarch-Wallet.png";
 import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png";
+import wallet32 from "../assets/wallets/images/latestph.png";
 
 import { CiSearch } from "react-icons/ci";
 
@@ -40,6 +41,7 @@ const DATA = [
   { id: 1, wallet: "Trust", logo: wallet1 },
   { id: 2, wallet: "Metamask", logo: wallet2 },
   { id: 3, wallet: "Coinbase", logo: wallet3 },
+  { id: 32, wallet: "Phantom", logo: wallet32 },
   { id: 4, wallet: "Crypto.com", logo: wallet4 },
   { id: 5, wallet: "Defi", logo: wallet31 },
   { id: 6, wallet: "Nimiq", logo: wallet5 },
