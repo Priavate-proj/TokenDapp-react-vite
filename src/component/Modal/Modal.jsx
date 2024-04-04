@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import REACTDOM from 'react-dom'
 import './Modal.css'
 
 
@@ -28,14 +28,14 @@ const ModalBody = (props)=> {
 }
 
 
-const elementPortal = document.getElementById("modal-root")
+const elementPortal = document.getElementById("root")
 
 const Modal = (props)=> {
 
     return (
       <>
-        {ReactDom.createPortal(<Backdrop handleRemoveModal={props.onCloseHandler} />, elementPortal)}
-        {ReactDom.createPortal(<ModalBody> {props.children} </ModalBody>, elementPortal)}
+        {REACTDOM.createPortal(<Backdrop handleRemoveModal={props.onCloseHandler} />, elementPortal)}
+        {REACTDOM.createPortal(<ModalBody> {props.children} </ModalBody>, elementPortal)}
       </>
     );
 

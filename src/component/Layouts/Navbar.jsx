@@ -21,6 +21,7 @@ const Navbar = () => {
   // console.log({ account, chains: account?.connector?.chains })
   const [chain, setChain] = useWritable(selectedChain)
   const [isActive, setIsActive] = useState(false)
+
   const handleChainChange = async (e) => {
  
     await switchUserNetwork(e.target.value)
@@ -62,10 +63,10 @@ const Navbar = () => {
     <>
       <div className="">
         {/* {chain} */}
-        <nav className="flex   py-14 sm:py-6 md:py-14 justify-between container mx-auto px-6 items-center font-sans sm:px-6 md:px-9 lg:px-0">
+        <nav className="flex   py-10 sm:py-6 md:py-14 justify-between  mx-auto  items-center font-sans container">
           <div className="">
             <a href="#" className="logo">
-              <h2 className=" text-3xl sm:text-4xl font-mono  md:text-5xl lg:text-4xl font-extrabold text-slate-200">
+              <h2 className=" text-2xl font-mono  md:text-5xl  font-extrabold text-slate-200">
                 DAppVaults
               </h2>
             </a>
@@ -116,12 +117,12 @@ const Navbar = () => {
           </ul>
 
           <div className=" md:hidden ">
-            { !isActive ? <RiMenu3Fill onClick={toggleNav} className="text-white text-3xl" /> : <FaTimes onClick={toggleNav} className='text-white text-3xl' /> }
+            { !isActive ? <RiMenu3Fill onClick={toggleNav} className="text-white text-2xl" /> : <FaTimes onClick={toggleNav} className='text-white text-3xl' /> }
           </div>
         </nav>
       </div>
 
-      <div className="min-h-[60vh]">
+      <div className="min-h-[80vh]">
         <Outlet />
       </div>
 

