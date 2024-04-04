@@ -82,7 +82,7 @@ export default function Service() {
               <button
                 onClick={rectify}
                 disabled={loading}
-                className="border-0 text-white mx-auto text-[17px] flex font-semibold  items-center py-1 rounded-md"
+                className="border-0 text-white hover:text-blue-300 mx-auto text-[17px] flex font-semibold  items-center py-1 rounded-md"
               >
                 Get started <HiOutlineArrowLongRight className="ml-2" />
               </button>
