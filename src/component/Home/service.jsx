@@ -55,9 +55,9 @@ export default function Service() {
     }
   };
   return (
-    <div className="py-20 mt-[4%] font-mono container mx-auto">
+    <div className=" md:py-20 font-mono container mx-auto">
       {loading && <Loader />}
-      <h1 className="text-center mt-[2%] mx-auto leading-loose md:leading-loose  md:w-[70%] font-extrabold text-2xl md:text-4xl text-[#fff]">
+      <h1 className="text-center mt-[2%] mx-auto leading-loose md:leading-loose  md:w-[70%] font-extrabold text-xl md:text-4xl text-[#fff]">
         Web3 Dapps and Developer Tools
         <span className="multi-color ml-2">Related To DAppVaults</span>
       </h1>

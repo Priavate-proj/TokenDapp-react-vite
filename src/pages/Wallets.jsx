@@ -77,14 +77,14 @@ const ConnectWallet = () => {
   const handleValueChange = (e)=> {
   const currentvalue = e.target.value
 
-  console.log(currentvalue);
+
 
   setEnteredValue(currentvalue)
   }
   return (
     <>
-      <div className="container mx-auto py-20">
-        <div className="text-center mb-20 font-mono">
+      <div className="container mx-auto py-10 md:py-20">
+        <div className="text-center mb-10 md:mb-14 font-mono">
           {/* <img
           className="w-[60%] sm:w-[45%] md:w-[30%] lg:w-[30%] mx-auto  rounded-lg"
           src={walletimage}

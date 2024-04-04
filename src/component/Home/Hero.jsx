@@ -26,18 +26,18 @@ const Hero = () => {
     setModalOpen(false)
   }
   return (
-    <div className=" container mx-auto py-10 md:py-14 font-mono">
-      <div className="flex mt-[5%] md:mt-[3%] flex-col sm:flex-col md:flex-col lg:flex-row justify-center items-center ">
+    <div className=" container mx-auto py-4 md:py-14 ">
+      <div className="flex mt-[5%] md:mt-[3%] flex-col md:flex-row justify-center md:items-center ">
         <div className="mb-[20%] sm:mb-8 md:mb-0 lg:mb-0 ">
           <div className="mb-10">
-            <h1 className="text-white font-bold text-4xl  leading-[1.7] font-sans  md:leading-[2] lg:leading[3] xl:leading-[1.5]  sm:text-4xl md:text-4xl lg:text-4xl mb-5">
+            <h1 className="text-white font-bold text-2xl text-center md:text-left  leading-[1.7] font-sans  md:leading-[2] lg:leading[3] xl:leading-[1.5]  sm:text-4xl md:text-4xl lg:text-4xl mb-5">
               <span className="text-[#5b6fdf] mr-2 ">
                 {" "}
                 Non Custodial syncing using
               </span>
               our sync algorithm
             </h1>
-            <p className="text-[#c5d0e5] text-[16px] w-full sm:w-full md:w-[80%] lg:w-[90%] my-6 leading-loose md:leading-[3] ">
+            <p className="text-white text-center md:text-left  text-[16px] w-full sm:w-full md:w-[80%] lg:w-[90%] my-6 leading-loose md:leading-[3] ">
               A decentralized platform and network that blends incorporating
               Blockchain aspects such as non-custodial management, Micropools,
               and decentralized governance.
