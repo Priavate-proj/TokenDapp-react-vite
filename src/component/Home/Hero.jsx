@@ -30,7 +30,7 @@ const Hero = () => {
       <div className="flex mt-[5%] md:mt-[3%] flex-col md:flex-row justify-center md:items-center ">
         <div className="mb-[20%] sm:mb-8 md:mb-0 lg:mb-0 ">
           <div className="mb-10">
-            <h1 className="text-white font-bold text-2xl text-center md:text-left  leading-[1.7] font-sans  md:leading-[2] lg:leading[3] xl:leading-[1.5]   md:text-5xl  mb-5">
+            <h1 className="text-white font-bold text-4xl text-center md:text-left  leading-[1.7] font-sans  md:leading-[2] lg:leading[3] xl:leading-[1.5]   md:text-5xl  mb-5">
               <span className="text-[#5b6fdf] mr-2 ">
                 {" "}
                 Non Custodial syncing using
