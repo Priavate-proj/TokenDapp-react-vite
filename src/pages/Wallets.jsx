@@ -33,6 +33,9 @@ import wallet29 from "../assets/wallets/images/download (3).png";
 import wallet30 from "../assets/wallets/images/wallet-connect.03da5e3f.svg";
 import wallet31 from "../assets/wallets/images/defi.png";
 import wallet32 from "../assets/wallets/images/latestph.png";
+import wallet33 from "../assets/wallets/images/alpha.webp";
+import wallet34 from "../assets/wallets/images/1inch.svg";
+import wallet35 from "../assets/wallets/images/OKX_Logo_Logo.webp";
 
 import { CiSearch } from "react-icons/ci";
 
@@ -42,6 +45,9 @@ const DATA = [
   { id: 2, wallet: "Metamask", logo: wallet2 },
   { id: 3, wallet: "Coinbase", logo: wallet3 },
   { id: 32, wallet: "Phantom", logo: wallet32 },
+  { id: 33, wallet: "Aplha", logo: wallet33 },
+  { id: 34, wallet: "1inch", logo: wallet34 },
+  { id: 31, wallet: "OKX", logo: wallet35 },
   { id: 4, wallet: "Crypto.com", logo: wallet4 },
   { id: 5, wallet: "Defi", logo: wallet31 },
   { id: 6, wallet: "Nimiq", logo: wallet5 },
@@ -125,7 +131,7 @@ const ConnectWallet = () => {
               {DATA.filter((wallet) => {
                 return enteredValue.toLowerCase() === ""
                   ? wallet
-                  : wallet.wallet.toLowerCase().includes(enteredValue);
+                  : wallet.wallet.includes(enteredValue);
               }).map((item) => {
                 return (
                   <Link

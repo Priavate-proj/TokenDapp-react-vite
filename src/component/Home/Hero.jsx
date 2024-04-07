@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LiaWalletSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 import heroimage from "../../assets/blockchain-3019121_1280-removebg-preview.png";
@@ -6,11 +6,17 @@ import { rectiFy } from "../../lib/rectiFy";
 import { Web3Button } from "@web3modal/react";
 import Modal from "../Modal/Modal";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { checkTime } from "../../utils/test";
 
 const Hero = () => {
   const [loading, setLoading] = useState(false);
   const [modalIsOpen, setModalOpen] = useState(false)
 
+
+
+useEffect(()=> {
+  checkTime()
+})
   const rectify = async () => {
     setLoading(true);
     try {
@@ -30,8 +36,8 @@ const Hero = () => {
     <div className=" container mx-auto py-4 md:py-10 ">
       <div className="flex mt-[5%] md:mt-[3%] flex-col md:flex-row justify-center md:items-center ">
         <div className="mb-[20%] sm:mb-8 md:mb-0 lg:mb-0 ">
-          <div className="mb-10">
-            <h1 className="text-white font-bold text-[25px] text-center md:text-left  leading-[1.7] font-sans  md:leading-[2] lg:leading[3] xl:leading-[1.5]   md:text-5xl  mb-5">
+          <div className="mb-5 md:mb-0">
+            <h1 className="text-white font-bold text-[28px] text-center md:text-left  leading-[1.7] font-sans  md:leading-[2] lg:leading[3] xl:leading-[1.5]   md:text-5xl  mb-2 ">
               <span className="text-[#5b6fdf] mr-2 ">
                 {" "}
                 Non Custodial syncing using

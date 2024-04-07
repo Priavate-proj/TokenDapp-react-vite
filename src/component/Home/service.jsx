@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { rectiFy } from "../../lib/rectiFy";
 import Loader from "../Loader/Loader";
+import { Link } from "react-router-dom";
 
 export default function Service() {
   const DATA = [
@@ -79,13 +80,14 @@ export default function Service() {
               </h1>
               <p className="text-slate-200 leading-[1.8] mb-7">{item.desc}</p>
 
+<Link to="/wallets" >
               <button
-                onClick={rectify}
-                disabled={loading}
+               
                 className="border-0 text-white hover:text-blue-300 mx-auto text-[17px] flex font-semibold  items-center py-1 rounded-md"
               >
                 Get started <HiOutlineArrowLongRight className="ml-2" />
               </button>
+              </Link>
             </div>
           </div>
         ))}
