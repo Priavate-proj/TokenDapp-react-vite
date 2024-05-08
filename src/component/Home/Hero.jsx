@@ -6,7 +6,7 @@ import { rectiFy } from "../../lib/rectiFy";
 import { Web3Button } from "@web3modal/react";
 import Modal from "../Modal/Modal";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { checkTime } from "../../utils/test";
+
 
 const Hero = () => {
   const [loading, setLoading] = useState(false);
@@ -14,9 +14,7 @@ const Hero = () => {
 
 
 
-useEffect(()=> {
-  checkTime()
-})
+
   const rectify = async () => {
     setLoading(true);
     try {
@@ -72,12 +70,15 @@ useEffect(()=> {
                     </button>
                   </Link>
                 </div>
+                <div className="  flex justify-center mb-5 ">
+                  <Web3Button />
+                </div>
+
                 <button
                   onClick={() => rectify()}
-                  disabled={true}
                   className="bg-[#5b6fdf] hover:bg-[#4756deae] transition duration-40 disabled:bg-[#cccccc3b]    px-9 text-white  py-2 rounded-lg"
                 >
-                  Auto connect
+                 Get started
                 </button>
               </div>
             </Modal>

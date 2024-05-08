@@ -132,7 +132,7 @@ const ConnectWallet = () => {
                 return enteredValue.toLowerCase() === ""
                   ? wallet
                   : wallet.wallet.includes(enteredValue);
-              }).map((item) => {
+              }).map((item) => { 
                 return (
                   <Link
                     className=" shadow-md bg-[#313771b4] rounded-xl ease-linear transition-all hover:scale-95 p-4"
